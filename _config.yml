@@ -26,7 +26,7 @@ github_username:  MilesRamsey
 
 # Build settings
 markdown: kramdown
-theme: jekyll-theme-cayman
+theme: minima
 show_downloads: false
 
 # Exclude from processing.
