@@ -26,7 +26,8 @@ github_username:  MilesRamsey
 
 # Build settings
 markdown: kramdown
-theme: minima
+theme: jekyll-theme-modernist
+show_downloads: false
 plugins:
   - jekyll-feed
 
