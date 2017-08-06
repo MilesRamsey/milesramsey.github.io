@@ -26,10 +26,8 @@ github_username:  MilesRamsey
 
 # Build settings
 markdown: kramdown
-theme: jekyll-theme-modernist
+theme: jekyll-theme-cayman
 show_downloads: false
-plugins:
-  - jekyll-feed
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
