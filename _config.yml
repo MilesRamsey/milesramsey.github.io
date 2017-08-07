@@ -14,13 +14,8 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Miles Ramsey
-intro: >
-  I'm a Young Professional living in Downtown Salt Lake City.  <a href="url">link text</a> 
-slc:
-book: 
-
 description: > # this means to ignore newlines until "baseurl:"
-  Feel free to reach out to me through any of my social media
+  Personal motto: If I didn't learn something new today, then it was a waste.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: Mileslimes
