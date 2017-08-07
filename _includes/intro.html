@@ -8,7 +8,7 @@
                 {{ site.title }}
             </h3>
             <p>
-                {{ site.intro }}
+                {{ site.intro }} {{ include intro-text.md | markdownify }}
             </p>
         </div>
     </div>

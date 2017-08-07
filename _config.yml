@@ -15,9 +15,7 @@
 # in the templates via {{ site.myvariable }}.
 title: Miles Ramsey
 intro: >
-  I'm a Young Professional living in Downtown Salt Lake City.
-  this is a test
-  to see if md does what I expect
+  I'm a Young Professional living in Downtown Salt Lake City.  
 slc:
 book: 
 
