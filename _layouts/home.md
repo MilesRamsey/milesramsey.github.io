@@ -6,15 +6,15 @@ layout: default
 
   {{ content }}
 
-  {% include intro.html %}
+  {% include intro.md %}
   
-  {% include salesforce.html %}
+  {% include salesforce.md %}
   
-  {% include certifit.html %}
+  {% include certifit.md %}
   
-  {% include utah.html %}
+  {% include utah.md %}
   
-  {% include youtube.html %}
+  {% include youtube.md %}
   
   <!-- <h1 class="page-heading">Posts</h1>
   

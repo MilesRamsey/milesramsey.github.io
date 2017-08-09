@@ -24,19 +24,19 @@
         <ul class="social-media-list">
           {% if site.linkedin_username %}
           <li>
-            {% include icon-linkedin.html username=site.linkedin_username %}
+            {% include icon-linkedin.md username=site.linkedin_username %}
           </li>
           {% endif %}
 
           {% if site.github_username %}
           <li>
-            {% include icon-github.html username=site.github_username %}
+            {% include icon-github.md username=site.github_username %}
           </li>
           {% endif %}
 
           {% if site.twitter_username %}
           <li>
-            {% include icon-twitter.html username=site.twitter_username %}
+            {% include icon-twitter.md username=site.twitter_username %}
           </li>
           {% endif %}
         </ul>
