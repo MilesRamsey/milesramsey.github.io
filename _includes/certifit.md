@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-md-8">
       <h3>
-        Certifit Auto Body Parts -- 2012 - 2015
+        <center>Certifit Auto Body Parts 2012 - 2015</center>
       </h3>
       <ul class="list-group">
         <li class="list-group-item">
