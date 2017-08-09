@@ -16,7 +16,7 @@
           Developing Point of Sale software for NAPA Auto Parts
         </li>
         <li class="list-group-item">
-          Completed over 270 total Jiras (In the top 10 completion rating for developers in the past 2 years)
+          In the top 10 Jira completion rating for developers in the past 2 years
         </li>
         <li class="list-group-item">
           Achieved "Trailhead Ranger" status (only 4% of the company has accomplished this)
