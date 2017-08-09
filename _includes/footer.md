@@ -34,6 +34,12 @@
           </li>
           {% endif %}
 
+          {% if site.hackerrank_username %}
+          <li>
+            {% include icon-hackerrank.md username=site.hackerrank_username %}
+          </li>
+          {% endif %}
+
           {% if site.twitter_username %}
           <li>
             {% include icon-twitter.md username=site.twitter_username %}
