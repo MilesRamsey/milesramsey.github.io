@@ -5,7 +5,7 @@
     </div>
     <div class="col-md-8">
       <h3>
-        University of Utah
+        University of Utah -- 2009 - 2015
       </h3>
       <ul class="list-group">
         <li class="list-group-item">

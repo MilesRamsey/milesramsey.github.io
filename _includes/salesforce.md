@@ -5,12 +5,11 @@
     </div>
     <div class="col-md-8">
       <h3>
-        <center>Salesforce - Commerce Cloud</center>
+        <center>Salesforce Commerce Cloud -- 2015 - Current</center>
       </h3>
       <ul class="list-group">
         <li class="list-group-item">
-          Software Engineering Member of Technical Staff <BR>
-          2015 - Current
+          Software Engineering Member of Technical Staff
         </li>
         <li class="list-group-item">
           Developing Point of Sale software for NAPA Auto Parts

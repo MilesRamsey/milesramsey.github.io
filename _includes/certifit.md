@@ -2,12 +2,11 @@
   <div class="row">
     <div class="col-md-8">
       <h3>
-        Certifit Auto Body Parts
+        Certifit Auto Body Parts -- 2012 - 2015
       </h3>
       <ul class="list-group">
         <li class="list-group-item">
-          Programmer <BR>
-          2012 - 2015
+          Programmer          
         </li>
         <li class="list-group-item">
           Maintain testing suite for product catalog of 30,000 products
