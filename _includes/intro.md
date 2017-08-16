@@ -8,7 +8,7 @@
                 {{ site.title }}
             </h3>
             <p>
-                {% include intro-text.md %}
+                {% include_relative intro-text.md %}
             </p>
         </div>
     </div>
