@@ -2,10 +2,11 @@
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
   {% include head.md %}
-  {% include header.md %}
 
   <body>
 
+    {% include header.md %}
+    
     <main class="page-content container" aria-label="Content">
       <div class="wrapper">
         {{ content }}
