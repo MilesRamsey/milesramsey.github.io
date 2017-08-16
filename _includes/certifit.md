@@ -1,5 +1,8 @@
 <div class="well">
   <div class="row">
+    <div class="col-md-4 vcenter">
+      <img class="img-responsive" src="/assets/certifit.jpg" alt="Certifit">
+    </div>
     <div class="col-md-8">
       <h3>
         <center>Certifit Auto Body Parts 2012 - 2015</center>
@@ -21,9 +24,6 @@
           Manage accounting data from 30 stores across multiple databases
         </li>
       </ul>
-    </div>
-    <div class="col-md-4 vcenter">
-      <img class="img-responsive" src="/assets/certifit.jpg" alt="Certifit">
     </div>
   </div>
 </div>
