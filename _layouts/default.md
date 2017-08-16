@@ -4,8 +4,6 @@
   {% include head.md %}
 
   <body>
-
-    {% include header.md %}
     
     <main class="page-content container" aria-label="Content">
       <div class="wrapper">
