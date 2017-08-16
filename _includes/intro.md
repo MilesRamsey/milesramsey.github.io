@@ -8,7 +8,8 @@
                 {{ site.title }}
             </h3>
             <p>
-                {% include_relative intro-text.md %}
+                {% capture intro_include %}{% include intro-text.md %}{% endcapture %}
+                {{ intro_include | markdownify }}
             </p>
         </div>
     </div>
