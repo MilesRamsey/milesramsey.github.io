@@ -1,6 +1,7 @@
 <div class="well">
     <div class="row">
         <div class="col-md-4">
+            ![Profile Picture](/assets/miles.jpg?raw=true){:class="img-responsive"}
             <img class="img-responsive" src="/assets/miles.jpg" alt="Profile Picture">
         </div>
         <div class="col-md-8">
