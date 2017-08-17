@@ -1,7 +1,9 @@
 <div class="well">
   <div class="row">
     <div class="col-md-4">
+      <div class="vcenter">
       <img class="img-responsive" src="/assets/sfdc.png" alt="Salesforce">
+      </div>
     </div>
     <div class="col-md-8">
       <h3>
