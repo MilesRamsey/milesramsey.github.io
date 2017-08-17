@@ -5,8 +5,9 @@ layout: default
 <div class="home">
 
   {{ content }}
-
-  {% include intro.md %}
+  
+  {% capture intro_include %}{% include intro.md %}{% endcapture %}
+  {{ intro_include | markdownify }}
   
   {% include salesforce.md %}
   
