@@ -5,7 +5,8 @@
     </div>
     <div class="col-md-8">
       <h3>
-        <center>Salesforce Commerce Cloud 2015 - Current</center>
+          Salesforce Commerce Cloud<BR>
+          2015 - Current
       </h3>
       <ul class="list-group">
         <li class="list-group-item">
