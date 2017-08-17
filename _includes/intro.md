@@ -1,7 +1,7 @@
 <div class="well">
     <div class="row">
         <div class="col-md-4">
-            ![Profile Picture](/assets/miles.jpg)
+            ![Profile Picture]({{ site.url }}/assets/miles.jpg)
         </div>
         <div class="col-md-8">
             <h3>
