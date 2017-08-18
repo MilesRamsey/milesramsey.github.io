@@ -1,9 +1,10 @@
 <div class="well">
   <div class="row">
-    <div class="col-md-4 vcenter">
+    <div class="col-md-5 frame">
+      <span class="helper"></span>
       <img class="img-responsive" src="/assets/certifit.jpg" alt="Certifit">
     </div>
-    <div class="col-md-8">
+    <div class="col-md-7">
       <h3>
           Certifit Auto Body Parts
       </h3>
