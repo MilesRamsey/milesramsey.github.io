@@ -5,9 +5,11 @@
     </div>
     <div class="col-md-8">
       <h3>
-          University of Utah<BR>
-          2009 - 2015
+          University of Utah
       </h3>
+      <h4>
+        2009 - 2015
+      </h4>
       <ul class="list-group">
         <li class="list-group-item">
           Bachelor of Science in Computer Science
