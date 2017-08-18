@@ -1,10 +1,10 @@
 <div class="well">
   <div class="row">
-    <div class="col-md-4 frame">
+    <div class="col-md-5 frame">
       <span class="helper"></span>
       <img class="img-responsive" src="/assets/sfdc.png" alt="Salesforce">
     </div>
-    <div class="col-md-8">
+    <div class="col-md-7">
       <h3>
           Salesforce Commerce Cloud
       </h3>
