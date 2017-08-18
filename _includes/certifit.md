@@ -5,9 +5,11 @@
     </div>
     <div class="col-md-8">
       <h3>
-          Certifit Auto Body Parts<BR>
-          2012 - 2015
+          Certifit Auto Body Parts
       </h3>
+      <h4>
+          2012 - 2015
+      </h4>
       <ul class="list-group">
         <li class="list-group-item">
           Programmer          
