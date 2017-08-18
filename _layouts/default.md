@@ -10,6 +10,8 @@
         {{ content }}
       </div>
     </main>
+    
+    <hr>
 
     {% include footer.md %}
 
