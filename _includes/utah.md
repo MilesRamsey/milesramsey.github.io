@@ -1,9 +1,10 @@
 <div class="well">
   <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-5 frame">
+      <span class="helper"></span>
       <img class="img-responsive" src="/assets/utah.png" alt="University of Utah">
     </div>
-    <div class="col-md-8">
+    <div class="col-md-7">
       <h3>
           University of Utah
       </h3>
