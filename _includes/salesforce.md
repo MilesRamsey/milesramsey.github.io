@@ -7,9 +7,11 @@
     </div>
     <div class="col-md-8">
       <h3>
-          Salesforce Commerce Cloud<BR>
-          2015 - Current
+          Salesforce Commerce Cloud
       </h3>
+      <h4>
+        2015 - Current
+      </h4>
       <ul class="list-group">
         <li class="list-group-item">
           Software Engineering Member of Technical Staff
