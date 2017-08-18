@@ -1,10 +1,8 @@
 <div class="well">
   <div class="row">
     <div class="col-md-4 frame">
-      <div>
-        <span class="helper"></span>
-        <img class="img-responsive" src="/assets/sfdc.png" alt="Salesforce">
-      </div>
+      <span class="helper"></span>
+      <img class="img-responsive" src="/assets/sfdc.png" alt="Salesforce">
     </div>
     <div class="col-md-8">
       <h3>
