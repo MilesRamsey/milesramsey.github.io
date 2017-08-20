@@ -39,6 +39,12 @@
             {% include icon-hackerrank.md username=site.hackerrank_username %}
           </li>
           {% endif %}
+          
+          {% if site.freecodecamp_username %}
+          <li>
+            {% include icon-freecodecamp.md username=site.freecodecamp_username %}
+          </li>
+          {% endif %}
 
           {% if site.twitter_username %}
           <li>

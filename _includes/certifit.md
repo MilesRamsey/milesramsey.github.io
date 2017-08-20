@@ -1,12 +1,16 @@
 <div class="well">
   <div class="row">
-    <div class="col-md-4 vcenter">
+    <div class="col-md-5 frame">
+      <span class="helper"></span>
       <img class="img-responsive" src="/assets/certifit.jpg" alt="Certifit">
     </div>
-    <div class="col-md-8">
+    <div class="col-md-7">
       <h3>
-        <center>Certifit Auto Body Parts 2012 - 2015</center>
+          Certifit Auto Body Parts
       </h3>
+      <h4>
+          2012 - 2015
+      </h4>
       <ul class="list-group">
         <li class="list-group-item">
           Programmer          

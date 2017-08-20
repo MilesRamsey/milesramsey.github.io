@@ -1,12 +1,16 @@
 <div class="well">
   <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-5 frame">
+      <span class="helper"></span>
       <img class="img-responsive" src="/assets/utah.png" alt="University of Utah">
     </div>
-    <div class="col-md-8">
+    <div class="col-md-7">
       <h3>
-        <center>University of Utah 2009 - 2015</center>
+          University of Utah
       </h3>
+      <h4>
+        2009 - 2015
+      </h4>
       <ul class="list-group">
         <li class="list-group-item">
           Bachelor of Science in Computer Science

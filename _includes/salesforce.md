@@ -1,12 +1,16 @@
 <div class="well">
   <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-5 frame">
+      <span class="helper"></span>
       <img class="img-responsive" src="/assets/sfdc.png" alt="Salesforce">
     </div>
-    <div class="col-md-8">
+    <div class="col-md-7">
       <h3>
-        <center>Salesforce Commerce Cloud 2015 - Current</center>
+          Salesforce Commerce Cloud
       </h3>
+      <h4>
+        2015 - Current
+      </h4>
       <ul class="list-group">
         <li class="list-group-item">
           Software Engineering Member of Technical Staff
