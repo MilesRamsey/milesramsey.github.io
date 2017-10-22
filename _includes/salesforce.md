@@ -16,7 +16,7 @@
           Software Engineering Member of Technical Staff
         </li>
         <li class="list-group-item">
-          Developing Point of Sale software for NAPA Auto Parts
+          Developing Point of Sale software
         </li>
         <li class="list-group-item">
           In the top 10 Jira completion rating for developers in the past 2 years
