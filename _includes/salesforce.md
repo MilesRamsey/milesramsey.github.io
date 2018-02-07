@@ -13,13 +13,16 @@
       </h4>
       <ul class="list-group">
         <li class="list-group-item">
-          Software Engineering Member of Technical Staff
+          Senior Member of Technical Staff, Software Engineering
         </li>
         <li class="list-group-item">
           Developing Point of Sale software
         </li>
         <li class="list-group-item">
           In the top 10 Jira completion rating for developers in the past 2 years
+        </li>
+        <li class="list-group-item">
+          Winner of 2017 Winter Hackathon for building a mobile application that uses AI to identify photos and Buy Online Pick Up In Store
         </li>
         <li class="list-group-item">
           Achieved "Trailhead Ranger" status (only 4% of the company has accomplished this)
