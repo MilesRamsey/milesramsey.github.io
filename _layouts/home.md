@@ -15,6 +15,6 @@ layout: default
   
   {% include utah.md %}
   
-  {% include youtube.md %}
+  <!--{% include youtube.md %}-->
 
 </div>
