@@ -1,1 +1,0 @@
-<a href="https://www.linkedin.com/in/{{ include.username }}"><i class="fa fa-linkedin-square fa-lg"></i> <span class="username">{{ site.title }}</span></a>
