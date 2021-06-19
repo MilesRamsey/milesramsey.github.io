@@ -11,16 +11,6 @@ html {
 	font-size: 62.5%;
 }
 
-body {
-	font: normal normal normal 1.1em/1.3em "Helvetica Neue", Helvetica, Arial, sans-serif;
-	color: #fff;
-	margin: 2em;
-	-webkit-font-smoothing: antialiased;
-	text-rendering: optimizeLegibility;
-
-	background-color: var(--dark); /* the color of art, http://jtnimoy.net/workviewer.php?q=172 */
-}
-
 /* looks like the background color should change according to the month? but it doesn't?
 body.jan, body.feb { 	background-color: #666;  }
 body.mar { 	background-color: #ccc;  }
@@ -36,18 +26,36 @@ body.dec { 	background-color: #093; }
 /* colors green #4C9689, dark #121016, light #1A1D21 */
 /* colors orange #d39b46, dark #121518, light #1A1D21 */
 /* colors orange #ffc806, light #222529, dark #1A1D21 blue #1f57e7 */
+/* too much blue Mondorian blue #1f57e7 white #ffffff gray #8d8e90 red #fd0b00 black #1a1d21 orange #ffc806 */
+/* Dagobah gray #3f3f3f black #333333 text #969697 green #52a14b red #dc5960 white #f8f8fa blue #2d9ee0 */
+/* Work hard black #121518 gray #222629 text #919394 white #ffffff red #db6668 green #759c40 orange #d39b46 */
 :root{
 	/* variables */
-	--dark: #1A1D21;
-	--medium: #222529;
-	--light: #fff;
-	--bright: #fff;
+	--background: #3f3f3f;
+	--foreground: #1a1d21;
+	--text: #969697;
+	--headers: #f8f8fa;
+	--links: #2d9ee0;
+
+	--green: #52a14b;
+	--red: #dc5960;
+	
 	--contrast: #ffc806;
+}
+
+body {
+	font: normal normal normal 1.1em/1.3em "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #fff;
+	margin: 2em;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+
+	background-color: var(--background); /* the color of art, http://jtnimoy.net/workviewer.php?q=172 */
 }
 
 a {
 	text-decoration: none;
-	color: var(--contrast);
+	color: var(--links);
 }
 
 a:hover {
@@ -78,6 +86,7 @@ h2, h3 {
 p, ul li, table {
 	font-size: 1.2em;
 	line-height: 1.5em;
+	color: var(--text);
 }
 
 p, ul {
@@ -107,8 +116,6 @@ strong {
 	left: 0;
 	top: 0;
 }
-#other, #work {
-}
 .left{
 	float: left;
 	width: 415px;
@@ -117,20 +124,6 @@ strong {
 	float: left;
 	width: 100%;
 	padding: 1em 0 2em 0;
-}
-
-.straighten {
-	-webkit-transform: rotate(0deg) !important;
-	-webkit-transition: -webkit-transform 0.1s ease-in-out;
-}
-.after1s {
-	-webkit-transition-delay: 0.08s;
-}
-.after2s {
-	-webkit-transition-delay: 0.16s;
-}
-.after3s {
-	-webkit-transition-delay: 0.24s;
 }
 
 /* page */
@@ -160,7 +153,7 @@ p.cite {
 }
 
 .col {
-	background: var(--medium);
+	background: var(--foreground);
 	width: 100%;
 	float: left;
 	margin: 0 0 2em 0;
@@ -173,13 +166,6 @@ p.cite {
 	box-shadow: 5px 5px 3px rgba(0,0,0, 0.2);
 
 	transition: all 0.1s linear;
-}
-
-.col:hover {
-/*	left: -5px;
-	top: -5px;
-
-	box-shadow: 10px 10px 3px rgba(0,0,0, 0.2);*/
 }
 
 .sub {
@@ -229,12 +215,16 @@ th, td {
 	text-align: left;
 }
 
+th {
+	color: var(--headers);
+}
+
 th.date {
 	width: 2em;
 }
 
-th.bull, td.bull, th.description, td.description {
-	color: var(--light);
+th.bull, td.bull, td.description {
+	color: var(--text);
 }
 
 th.bull, td.bull {
@@ -271,7 +261,7 @@ th.head {
 td.date {
 	white-space: nowrap;
 	text-align: right;
-	color: #333;
+	color: var(--text);
 }
 
 td.description a {
