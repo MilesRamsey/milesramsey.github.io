@@ -13,26 +13,41 @@ html {
 
 body {
 	font: normal normal normal 1.1em/1.3em "Helvetica Neue", Helvetica, Arial, sans-serif;
-	color: #333;
+	color: #fff;
 	margin: 2em;
 	-webkit-font-smoothing: antialiased;
 	text-rendering: optimizeLegibility;
 
-	background-color: #A79F94; /* the color of art, http://jtnimoy.net/workviewer.php?q=172 */
+	background-color: var(--dark); /* the color of art, http://jtnimoy.net/workviewer.php?q=172 */
 }
 
-body.jan, body.feb { 	background-color: #666; /* dark grey */ }
-body.mar { 	background-color: #ccc; /* light grey */ }
-body.apr { 	background-color: #A79F94; /* the color of art, http://jtnimoy.net/workviewer.php?q=172 */ }
-body.may, body.jun { 	background-color: #0bf; /* blue */ }
-body.jul, body.aug { 	background-color: #852; /* brown */ }
-body.sep, body.oct { background-color: #956; /* mauve */  }
-body.nov { 	background-color: #f60; /* orange */  }
-body.dec { 	background-color: #093; /* green */ }
+/* looks like the background color should change according to the month? but it doesn't?
+body.jan, body.feb { 	background-color: #666;  }
+body.mar { 	background-color: #ccc;  }
+body.apr { 	background-color: #A79F94;  }
+body.may, body.jun { 	background-color: #0bf;  }
+body.jul, body.aug { 	background-color: #852;  }
+body.sep, body.oct { background-color: #956;   }
+body.nov { 	background-color: #f60;   }
+body.dec { 	background-color: #093; }
+*/
+
+/* slack colors */
+/* colors green #4C9689, dark #121016, light #1A1D21 */
+/* colors orange #d39b46, dark #121518, light #1A1D21 */
+/* colors orange #ffc806, light #222529, dark #1A1D21 blue #1f57e7 */
+:root{
+	/* variables */
+	--dark: #1A1D21;
+	--medium: #222529;
+	--light: #fff;
+	--bright: #fff;
+	--contrast: #ffc806;
+}
 
 a {
 	text-decoration: none;
-	color: #F60;
+	color: var(--contrast);
 }
 
 a:hover {
@@ -145,7 +160,7 @@ p.cite {
 }
 
 .col {
-	background: #fff;
+	background: var(--medium);
 	width: 100%;
 	float: left;
 	margin: 0 0 2em 0;
@@ -219,7 +234,7 @@ th.date {
 }
 
 th.bull, td.bull, th.description, td.description {
-	color: #666;
+	color: var(--light);
 }
 
 th.bull, td.bull {
