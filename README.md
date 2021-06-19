@@ -1,1 +1,1 @@
-My personal website accessible @ [milesramsey.com](https://milesramsey.com)
+My personal website accessible @ [milesramsey.com](https://milesramsey.github.io/)
