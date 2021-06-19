@@ -78,8 +78,6 @@ strong {
 .header{
 	float: left;
 	width: 100%;
-
-	-webkit-transform: rotate(-0.5deg);
 }
 .wrapright{
 	float: left;
@@ -95,10 +93,8 @@ strong {
 	top: 0;
 }
 #ios, #web {
-	-webkit-transform: rotate(0.5deg);
 }
 #other, #work {
-	-webkit-transform: rotate(-0.5deg);
 }
 .left{
 	float: left;
