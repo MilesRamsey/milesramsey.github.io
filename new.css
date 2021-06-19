@@ -1,0 +1,351 @@
+:focus {
+	outline: 0;
+}
+
+html, body {
+	margin: 0;
+}
+
+html {
+	height: 100%;
+	font-size: 62.5%;
+}
+
+body {
+	font: normal normal normal 1.1em/1.3em "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #333;
+	margin: 2em;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+
+	background-color: #A79F94; /* the color of art, http://jtnimoy.net/workviewer.php?q=172 */
+}
+
+body.jan, body.feb { 	background-color: #666; /* dark grey */ }
+body.mar { 	background-color: #ccc; /* light grey */ }
+body.apr { 	background-color: #A79F94; /* the color of art, http://jtnimoy.net/workviewer.php?q=172 */ }
+body.may, body.jun { 	background-color: #0bf; /* blue */ }
+body.jul, body.aug { 	background-color: #852; /* brown */ }
+body.sep, body.oct { background-color: #956; /* mauve */  }
+body.nov { 	background-color: #f60; /* orange */  }
+body.dec { 	background-color: #093; /* green */ }
+
+a {
+	text-decoration: none;
+	color: #F60;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+img {
+	display: block;
+}
+
+h1 {
+	font-size: 2em;
+	line-height: 1em;
+	margin-bottom: 0.25em;
+	font-weight: bold;
+}
+
+h2 {
+	margin: 0.5em 0 0.25em 0;
+}
+
+h2, h3 {
+	font-size: 1.3em;
+	line-height: 1.5em;
+	font-weight: bold;
+}
+
+p, ul li, table {
+	font-size: 1.2em;
+	line-height: 1.5em;
+}
+
+p, ul {
+	margin-bottom: 1.5em;
+}
+
+strong {
+	font-weight: bold;
+}
+
+/* layout */
+
+.header{
+	float: left;
+	width: 100%;
+
+	-webkit-transform: rotate(-0.5deg);
+}
+.wrapright{
+	float: left;
+	width: 100%;
+}
+.right{
+	margin-left: 415px;
+	padding-left: 2em;
+}
+.right .col {
+	z-index: 999;
+	left: 0;
+	top: 0;
+}
+#ios, #web {
+	-webkit-transform: rotate(0.5deg);
+}
+#other, #work {
+	-webkit-transform: rotate(-0.5deg);
+}
+.left{
+	float: left;
+	width: 415px;
+}
+.footer{
+	float: left;
+	width: 100%;
+	padding: 1em 0 2em 0;
+}
+
+.straighten {
+	-webkit-transform: rotate(0deg) !important;
+	-webkit-transition: -webkit-transform 0.1s ease-in-out;
+}
+.after1s {
+	-webkit-transition-delay: 0.08s;
+}
+.after2s {
+	-webkit-transition-delay: 0.16s;
+}
+.after3s {
+	-webkit-transition-delay: 0.24s;
+}
+
+/* page */
+
+.logo {
+	float: right;
+	margin-left: 2.0em;
+}
+
+#about {
+	padding-bottom: 2.5em;
+}
+
+p.cite {
+	clear: both;
+	font-size: 1.1em;
+	margin-left: 0em;
+	position: relative;
+	top: -0.5em;
+
+	text-shadow: 1px 1px 0px #ccc;
+	filter: dropshadow(color=#ccc, offx=1, offy=1);
+}
+
+.padding {
+	padding: 2em 2em 2.5em 2em;
+}
+
+.col {
+	background: #fff;
+	width: 100%;
+	float: left;
+	margin: 0 0 2em 0;
+	width: 100%;
+	min-width: 100%;
+	padding-bottom: 2em;
+	left: 0;
+	top: 0;
+
+	box-shadow: 5px 5px 3px rgba(0,0,0, 0.2);
+
+	transition: all 0.1s linear;
+}
+
+.col:hover {
+/*	left: -5px;
+	top: -5px;
+
+	box-shadow: 10px 10px 3px rgba(0,0,0, 0.2);*/
+}
+
+.sub {
+	float: left;
+	margin-right: 2em;
+	padding-right: 2em;
+}
+
+.first {
+	clear: left;
+}
+
+.links li {
+	list-style: none;
+	display: inline;
+	/*margin-right: 0.5em;*/
+	line-height: 1.3em;
+}
+
+.links li:after { content: " \2022"; color: #666; }
+.links li:last-child:after { content: none; }
+
+#web, #work {
+	position: relative;
+	z-index: 1;
+}
+
+abbr, acronym {
+	font-size: 0.8em;
+}
+
+abbr:hover, acronym:hover {
+	cursor: help;
+	border-bottom: 1px dotted #333;
+}
+
+/* table */
+
+table {
+	text-align: left;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+th, td {
+	padding: 0.3em 0.5em;
+	text-align: left;
+}
+
+th.date {
+	width: 2em;
+}
+
+th.bull, td.bull, th.description, td.description {
+	color: #666;
+}
+
+th.bull, td.bull {
+	text-align: center;
+	min-width: 1.5em;
+}
+
+th.project, td.project {
+	white-space: nowrap;
+}
+
+.right th.project {
+	width: 160px;
+}
+
+th, td {
+	border-bottom: 1px solid #CCC;
+}
+
+th {
+	font-weight: bold;
+	border-bottom: 1px solid #666;
+}
+
+tr:last-child td, tr:last-child th {
+	border-bottom: none;
+}
+
+th.head {
+	width: 2em;
+	font-size: 0.9em;
+}
+
+td.date {
+	white-space: nowrap;
+	text-align: right;
+	color: #333;
+}
+
+td.description a {
+	color: #666;
+}
+
+.hidden {
+	color: #333;
+}
+
+@media only screen and (min-resolution: 117dpi) and (max-resolution: 119dpi), only screen and (min-resolution: 131dpi) and (max-resolution: 133dpi), only screen and (min-resolution: 145dpi) and (max-resolution: 154dpi), only screen and (min-resolution: 162dpi) and (max-resolution: 164dpi), only screen and (min-resolution: 169dpi) {
+
+  /* Your touch-specific css goes here */
+}
+@media only screen and (min-resolution: 165dpi) and (max-resolution: 168dpi), only screen and (min-resolution: 155dpi) and (max-resolution: 160dpi), only screen and (min-resolution: 134dpi) and (max-resolution: 144dpi), only screen and (min-resolution: 120dpi) and (max-resolution: 130dpi), only screen and (max-resolution: 116dpi) {
+
+  /* Your click-specific css goes here */
+}
+@media (min-width: 541px){
+  /* Big view stuff goes here. */
+	body {
+		min-width: 800px;
+	}
+
+	.wrapper{
+		width: 100%;
+		margin: 0 auto;
+		min-width: 800px;
+	}
+	.left {
+		margin-left: -100%;
+	}
+	.col1 {
+		width: 395px;
+	}
+
+	.col2 {
+		width: 260px;
+	}
+
+	.col3 {
+		width: 330px;
+	}
+}
+@media (max-width: 540px) {
+  /* Smaller view stuff goes here. */
+	.gbm {
+		display: none;
+	}
+
+	.logo {
+		float: left;
+		margin-left: 0;
+		margin-bottom: 2.5em;
+	}
+
+	img {
+		display: inline;
+	}
+
+	.right, .left {
+		margin-left: 0;
+		padding-left: 0;
+	}
+
+	.left {
+		float: none;
+		width: auto;
+	}
+
+	.project, th.project, td.project {
+		white-space: normal !important;
+	}
+
+	th.project, td.project {
+		width: 35% !important;
+	}
+
+	br {
+		display: none;
+	}
+
+	.col1, .col2, .col3 {
+		width: 85%;
+	}
+}
