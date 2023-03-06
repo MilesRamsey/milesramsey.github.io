@@ -8,7 +8,7 @@ html, body {
 
 html {
 	height: 100%;
-	font-size: 200%;
+	font-size: 100%;
 }
 
 /* looks like the background color should change according to the month? but it doesn't?
