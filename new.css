@@ -38,14 +38,14 @@ body.dec { 	background-color: #093; }
 /* frameai #39434D,#272e35,#F26900,#ffffff,#272E35,#ADBED1,#48B8AD,#F3B200,#272e35,#ADBED1 */
 /* chargify #2C2C26,#229725,#13C217,#FFFFFF,#229725,#FFFFFF,#13C217,#439AEA,#229725,#FFFFFF */
 /* jellybeans fore #181818,back #b65f49,link #81A9C2,unused #ffffff,unsued #384048,headers #CFCFBD,text #74746b,unused #889962 */
-:root{
+/* :root{
 	/* variables using jellbean */
-	--background: #b65f49;
-	--foreground: #181818;
-	--text: #74746b;
-	--headers: #CFCFBD;
-	--links: #81A9C2;
-}
+/* 	--background: #b65f49;
+/* 	--foreground: #181818;
+/* 	--text: #74746b;
+/* 	--headers: #CFCFBD;
+/* 	--links: #81A9C2;
+/* } 
 
 body {
 	font: normal normal normal 1.1em/1.3em "Helvetica Neue", Helvetica, Arial, sans-serif;
