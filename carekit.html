@@ -151,12 +151,17 @@
         .catch(err => console.log(err));
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.0.7/countUp.min.js"></script>
+
     <script>
-      const kitsCounter = new CountUp('kitsCount', 152); // replace 152 with your current total
-      const valueCounter = new CountUp('kitsValue', 3040, { prefix: '$' }); // replace 3040 with your total value
+      const kitsDelivered = 3; // <-- your real number of kits delivered
+      const kitsValue = 51.36; // <-- your real total value delivered
+    
+      const kitsCounter = new CountUp('kitsCount', kitsDelivered);
+      const valueCounter = new CountUp('kitsValue', kitsValue, { prefix: '$', decimalPlaces: 2 });
     
       if (!kitsCounter.error) { kitsCounter.start(); } else { console.error(kitsCounter.error); }
       if (!valueCounter.error) { valueCounter.start(); } else { console.error(valueCounter.error); }
     </script>
+
 </body>
 </html>
