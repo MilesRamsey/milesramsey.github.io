@@ -1,354 +1,220 @@
+/* Reset focus outline */
 :focus {
-	outline: 0;
+    outline: 0;
 }
 
+/* Base settings */
 html, body {
-	margin: 0;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-size: 100%;
 }
 
-html {
-	height: 100%;
-	font-size: 100%;
-}
-
-/* looks like the background color should change according to the month? but it doesn't?
-body.jan, body.feb { 	background-color: #666;  }
-body.mar { 	background-color: #ccc;  }
-body.apr { 	background-color: #A79F94;  }
-body.may, body.jun { 	background-color: #0bf;  }
-body.jul, body.aug { 	background-color: #852;  }
-body.sep, body.oct { background-color: #956;   }
-body.nov { 	background-color: #f60;   }
-body.dec { 	background-color: #093; }
-*/
-
-/* slack colors */
-/* colors green #4C9689, dark #121016, light #1A1D21 */
-/* colors orange #d39b46, dark #121518, light #1A1D21 */
-/* colors orange #ffc806, light #222529, dark #1A1D21 blue #1f57e7 */
-/* too much blue Mondorian blue #1f57e7 white #ffffff gray #8d8e90 red #fd0b00 black #1a1d21 orange #ffc806 */
-/* Dagobah gray #3f3f3f black #333333 text #969697 green #52a14b red #dc5960 white #f8f8fa blue #2d9ee0 */
-/* Work hard black #121518 gray #222629 text #919394 white #ffffff red #db6668 green #759c40 orange #d39b46 */
-/* Aubergine Classic green #4c9689 red #eb4d5c dark #121016 light #19171d text #757578 headers #d1d2d3 */
-/* terminal back #1a2b23 fore #1a1d21 links #4ee077 text #347f4c headers #4ee077 */
-/* librato #262626,#555555,#0F80AA,#FFFFFF,#555555,#FFFFFF,#99D04A,#DCAF1B,#555555,#FFFFFF */
-/* ingress #000E0F,#000E0F,#393218,#F1C248,#006D77,#34EAF5,#0492D0,#F1C248,#000E0F,#34EAF5 */
-/* hummingbird #2F343B,#2F343B,#FD7532,#FFFFFF,#FD7532,#FFFFFF,#FD7532,#FD7532,#2F343B,#FFFFFF */
-/* gartland #404040,#696969,#FFD200,#000000,#000000,#FFFFFF,#00703C,#EF4C23,#696969,#FFFFFF */
-/* frameai #39434D,#272e35,#F26900,#ffffff,#272E35,#ADBED1,#48B8AD,#F3B200,#272e35,#ADBED1 */
-/* chargify #2C2C26,#229725,#13C217,#FFFFFF,#229725,#FFFFFF,#13C217,#439AEA,#229725,#FFFFFF */
-/* jellybeans fore #181818,back #b65f49,link #81A9C2,unused #ffffff,unsued #384048,headers #CFCFBD,text #74746b,unused #889962 */
-/* :root{
-	/* variables using jellbean */
-/* 	--background: #b65f49;
-/* 	--foreground: #181818;
-/* 	--text: #74746b;
-/* 	--headers: #CFCFBD;
-/* 	--links: #81A9C2;
-/* } 
-
+/* Base styles */
 body {
-	font: normal normal normal 1.1em/1.3em "Helvetica Neue", Helvetica, Arial, sans-serif;
-	color: var(--headers);
-	margin: 2em;
-	-webkit-font-smoothing: antialiased;
-	text-rendering: optimizeLegibility;
-
-	background-color: var(--background); /* the color of art, http://jtnimoy.net/workviewer.php?q=172 */
+    font: normal normal normal 1.1em/1.3em "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: var(--headers);
+    background-color: var(--background);
+    margin: 2em;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
 }
 
 a {
-	text-decoration: none;
-	color: var(--links);
+    text-decoration: none;
+    color: var(--links);
 }
 
 a:hover {
-	text-decoration: underline;
+    text-decoration: underline;
 }
 
+/* Image settings */
 img {
-	display: block;
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
+/* Headings */
 h1 {
-	font-size: 2em;
-	line-height: 1em;
-	margin-bottom: 0.25em;
-	font-weight: bold;
-}
-
-h2 {
-	margin: 0.5em 0 0.25em 0;
+    font-size: 2em;
+    line-height: 1em;
+    margin-bottom: 0.25em;
+    font-weight: bold;
 }
 
 h2, h3 {
-	font-size: 1.3em;
-	line-height: 1.5em;
-	font-weight: bold;
+    font-size: 1.3em;
+    line-height: 1.5em;
+    font-weight: bold;
+    margin: 0.5em 0 0.25em 0;
 }
 
+/* Paragraphs and Lists */
 p, ul li, table {
-	font-size: 1.2em;
-	line-height: 1.5em;
-	color: var(--text);
+    font-size: 1.2em;
+    line-height: 1.5em;
+    color: var(--text);
 }
 
 p, ul {
-	margin-bottom: 1.5em;
+    margin-bottom: 1.5em;
 }
 
 strong {
-	font-weight: bold;
+    font-weight: bold;
 }
 
-/* layout */
-
-.header{
-	float: left;
-	width: 100%;
-}
-.wrapright{
-	float: left;
-	width: 100%;
-}
-.right{
-	margin-left: 415px;
-	padding-left: 2em;
-}
-.right .col {
-	z-index: 999;
-	left: 0;
-	top: 0;
-}
-.left{
-	float: left;
-	width: 415px;
-}
-.footer{
-	float: left;
-	width: 100%;
-	padding: 1em 0 2em 0;
+/* Layout */
+.header, .wrapright, .footer {
+    float: left;
+    width: 100%;
 }
 
-/* page */
+.right {
+    margin-left: 415px;
+    padding-left: 2em;
+}
+
+.left {
+    float: left;
+    width: 415px;
+}
 
 .logo {
-	float: right;
-	margin-left: 2.0em;
-}
-
-#about {
-	padding-bottom: 2.5em;
-}
-
-p.cite {
-	clear: both;
-	font-size: 1.1em;
-	margin-left: 0em;
-	position: relative;
-	top: -0.5em;
-
-	text-shadow: 1px 1px 0px #ccc;
-	filter: dropshadow(color=#ccc, offx=1, offy=1);
+    float: right;
+    margin-left: 2em;
 }
 
 .padding {
-	padding: 2em 2em 2.5em 2em;
+    padding: 2em;
 }
 
+/* Columns */
 .col {
-	background: var(--foreground);
-	width: 100%;
-	float: left;
-	margin: 0 0 2em 0;
-	width: 100%;
-	min-width: 100%;
-	padding-bottom: 2em;
-	left: 0;
-	top: 0;
-
-	box-shadow: 5px 5px 3px rgba(0,0,0, 0.2);
-
-	transition: all 0.1s linear;
+    background: var(--foreground);
+    float: left;
+    width: 100%;
+    margin: 0 0 2em 0;
+    padding-bottom: 2em;
+    box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.2);
+    transition: all 0.1s linear;
 }
 
-.sub {
-	float: left;
-	margin-right: 2em;
-	padding-right: 2em;
-}
-
-.first {
-	clear: left;
-}
-
+/* Links in lists */
 .links li {
-	list-style: none;
-	display: inline;
-	/*margin-right: 0.5em;*/
-	line-height: 1.3em;
+    list-style: none;
+    display: inline;
+    line-height: 1.3em;
 }
 
-.links li:after { content: " \2022"; color: #666; }
-.links li:last-child:after { content: none; }
-
-#web, #work {
-	position: relative;
-	z-index: 1;
+.links li:after {
+    content: " \2022";
+    color: #666;
 }
 
-abbr, acronym {
-	font-size: 0.8em;
+.links li:last-child:after {
+    content: none;
 }
 
-abbr:hover, acronym:hover {
-	cursor: help;
-	border-bottom: 1px dotted #333;
-}
-
-/* table */
-
+/* Table styles */
 table {
-	text-align: left;
-	border-collapse: collapse;
-	width: 100%;
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
 }
 
 th, td {
-	padding: 0.3em 0.5em;
-	text-align: left;
+    padding: 0.3em 0.5em;
+    border-bottom: 1px solid #CCC;
 }
 
 th {
-	color: var(--headers);
-}
-
-th.date {
-	width: 2em;
-}
-
-th.bull, td.bull, td.description {
-	color: var(--text);
-}
-
-th.bull, td.bull {
-	text-align: center;
-	min-width: 1.5em;
-}
-
-th.project, td.project {
-	white-space: nowrap;
-}
-
-.right th.project {
-	width: 160px;
-}
-
-th, td {
-	border-bottom: 1px solid #CCC;
-}
-
-th {
-	font-weight: bold;
-	border-bottom: 1px solid #666;
+    font-weight: bold;
+    color: var(--headers);
+    border-bottom: 1px solid #666;
 }
 
 tr:last-child td, tr:last-child th {
-	border-bottom: none;
+    border-bottom: none;
 }
 
-th.head {
-	width: 2em;
-	font-size: 0.9em;
+/* Responsive Design */
+@media (min-width: 541px) {
+    body {
+        min-width: 800px;
+    }
+    .wrapper {
+        width: 100%;
+        margin: 0 auto;
+        min-width: 800px;
+    }
+    .left {
+        margin-left: -100%;
+    }
+    .col1 { width: 395px; }
+    .col2 { width: 260px; }
+    .col3 { width: 330px; }
 }
 
-td.date {
-	white-space: nowrap;
-	text-align: right;
-	color: var(--text);
-}
-
-td.description a {
-	color: #666;
-}
-
-.hidden {
-	color: #333;
-}
-
-@media only screen and (min-resolution: 117dpi) and (max-resolution: 119dpi), only screen and (min-resolution: 131dpi) and (max-resolution: 133dpi), only screen and (min-resolution: 145dpi) and (max-resolution: 154dpi), only screen and (min-resolution: 162dpi) and (max-resolution: 164dpi), only screen and (min-resolution: 169dpi) {
-
-  /* Your touch-specific css goes here */
-}
-@media only screen and (min-resolution: 165dpi) and (max-resolution: 168dpi), only screen and (min-resolution: 155dpi) and (max-resolution: 160dpi), only screen and (min-resolution: 134dpi) and (max-resolution: 144dpi), only screen and (min-resolution: 120dpi) and (max-resolution: 130dpi), only screen and (max-resolution: 116dpi) {
-
-  /* Your click-specific css goes here */
-}
-@media (min-width: 541px){
-  /* Big view stuff goes here. */
-	body {
-		min-width: 800px;
-	}
-
-	.wrapper{
-		width: 100%;
-		margin: 0 auto;
-		min-width: 800px;
-	}
-	.left {
-		margin-left: -100%;
-	}
-	.col1 {
-		width: 395px;
-	}
-
-	.col2 {
-		width: 260px;
-	}
-
-	.col3 {
-		width: 330px;
-	}
-}
 @media (max-width: 540px) {
-  /* Smaller view stuff goes here. */
-	.gbm {
-		display: none;
-	}
+    /* Adjust body and padding for mobile */
+    body {
+        margin: 1em;
+    }
+    .padding {
+        padding: 1em;
+    }
 
-	.logo {
-		float: left;
-		margin-left: 0;
-		margin-bottom: 2.5em;
-	}
+    /* Reset wrapper width */
+    .wrapper {
+        width: 100%;
+        min-width: 0;
+    }
 
-	img {
-		display: inline;
-	}
+    /* Image and Table Handling */
+    img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+    table {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+    }
 
-	.right, .left {
-		margin-left: 0;
-		padding-left: 0;
-	}
+    /* Layout adjustments */
+    .left, .right {
+        float: none;
+        width: 100%;
+        margin-left: 0;
+        padding-left: 0;
+    }
 
-	.left {
-		float: none;
-		width: auto;
-	}
+    /* Logo reposition for mobile */
+    .logo {
+        float: left;
+        margin: 0 0 2em 0;
+    }
 
-	.project, th.project, td.project {
-		white-space: normal !important;
-	}
+    /* Table projects */
+    .project, th.project, td.project {
+        white-space: normal !important;
+    }
+    th.project, td.project {
+        width: 35% !important;
+    }
 
-	th.project, td.project {
-		width: 35% !important;
-	}
+    /* Remove unnecessary breaks */
+    br {
+        display: none;
+    }
 
-	br {
-		display: none;
-	}
-
-	.col1, .col2, .col3 {
-		width: 85%;
-	}
+    /* Collapse columns nicely */
+    .col1, .col2, .col3 {
+        width: 85%;
+    }
 }
