@@ -168,5 +168,33 @@
             </div>
         </div>
     </div>
+    <script>
+      const sheetID = '1x6h1-zQZ1AAHRuHviIVYORp8A63GLGGQ4mHiD2_r-TE';
+      const sheetName = 'data source'; // or whatever your tab is called
+      const query = encodeURIComponent('SELECT *');
+      const url = `https://docs.google.com/spreadsheets/d/${sheetID}/gviz/tq?sheet=${sheetName}&tq=${query}`;
+    
+      fetch(url)
+        .then(res => res.text())
+        .then(rep => {
+          const jsonData = JSON.parse(rep.substr(47).slice(0, -2));
+          const table = document.createElement('table');
+          table.innerHTML = `
+            <thead>
+              <tr>
+                ${jsonData.table.cols.map(col => `<th>${col.label}</th>`).join('')}
+              </tr>
+            </thead>
+            <tbody>
+              ${jsonData.table.rows.map(row => `
+                <tr>
+                  ${row.c.map(cell => `<td>${cell ? cell.v : ''}</td>`).join('')}
+                </tr>`).join('')}
+            </tbody>
+          `;
+          document.getElementById('data-table').appendChild(table);
+        })
+        .catch(err => console.log(err));
+    </script>
 </body>
 </html>
