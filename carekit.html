@@ -159,16 +159,17 @@
 
     <script>
     window.onload = function() {
-      const kitsDelivered = 3; // update to your live number
-      const kitsValue = 51.36; // update to your live value
+      const kitsDelivered = 3;
+      const kitsValue = 51.36;
     
-      const kitsCounter = new CountUp('kitsCount', kitsDelivered);
-      const valueCounter = new CountUp('kitsValue', kitsValue, { prefix: '$', decimalPlaces: 2 });
+      const kitsCounter = new countUp.CountUp('kitsCount', kitsDelivered);
+      const valueCounter = new countUp.CountUp('kitsValue', kitsValue, { prefix: '$', decimalPlaces: 2 });
     
       if (!kitsCounter.error) { kitsCounter.start(); } else { console.error(kitsCounter.error); }
       if (!valueCounter.error) { valueCounter.start(); } else { console.error(valueCounter.error); }
     }
     </script>
+
 
 </body>
 </html>
