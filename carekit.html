@@ -88,17 +88,19 @@
                           <p>If you'd like to create your own, here's a list of the items I use:</p>
                         
                           <!-- preview version -->
-                          <div id="shopping-preview">
-                            <ul style="list-style: disc; margin-left: 2em; max-height: 6em; overflow: hidden; position: relative;">
-                              <li>Beef Jerky — Country Archer Grass-Fed Minis</li>
-                              <li>Food Gift Card — Meal Gift Card</li>
-                              <li>Fruit Snack — Pure Organic Bars</li>
-                            </ul>
-                            <!-- subtle fade effect to hint it's cut off -->
-                            <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 2em; background: linear-gradient(to bottom, transparent, var(--background));"></div>
+                          <div id="shopping-preview" style="position: relative;">
+                            <div style="max-height: 6em; overflow: hidden; position: relative;">
+                              <ul style="list-style: disc; margin-left: 2em; padding-right: 1em;">
+                                <li>Beef Jerky — Country Archer Grass-Fed Minis</li>
+                                <li>Food Gift Card — Meal Gift Card</li>
+                                <li>Fruit Snack — Pure Organic Bars</li>
+                              </ul>
+                              <!-- fading gradient -->
+                              <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 2em; background: linear-gradient(to bottom, transparent, var(--background));"></div>
+                            </div>
                         
                             <p style="text-align: center; margin-top: 1em;">
-                              <button id="toggleButton" onclick="toggleList()" style="padding: 0.5em 1em; font-size: 1em;">Show Full List</button>
+                              <button id="toggleButton" onclick="toggleList()" style="padding: 0.5em 1em; font-size: 1em;">Show Full List ↓</button>
                             </p>
                           </div>
                         
@@ -218,12 +220,12 @@
       if (isExpanded) {
         document.getElementById('full-shopping-list').style.display = 'none';
         document.getElementById('shopping-preview').style.display = 'block';
-        document.getElementById('toggleButton').innerText = 'Show Full List';
+        document.getElementById('toggleButton').innerText = 'Show Full List ↓';
         isExpanded = false;
       } else {
         document.getElementById('full-shopping-list').style.display = 'block';
         document.getElementById('shopping-preview').style.display = 'none';
-        document.getElementById('toggleButton').innerText = 'Hide List';
+        document.getElementById('toggleButton').innerText = 'Hide Full List ↑';
         isExpanded = true;
       }
     }
