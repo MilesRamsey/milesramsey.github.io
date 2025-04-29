@@ -84,12 +84,24 @@
 
                         <!-- shopping list -->
                         <section id="shopping-list">
-                            <h2>Shopping List</h2>
-                            <p>If you'd like to create your own, here's a list of the items I use:</p>
-    
-                            <!-- google sheets data -->
+                          <h2>Shopping List</h2>
+                          <p>If you'd like to create your own, here's a list of the items I use:</p>
+                        
+                          <!-- preview version -->
+                          <div id="shopping-preview">
+                            <ul style="list-style: disc; margin-left: 2em;">
+                              <li>Beef Jerky — Country Archer Grass-Fed Minis</li>
+                              <li>Food Gift Card — Meal Gift Card</li>
+                            </ul>
+                            <p style="text-align: center; margin-top: 1em;">
+                              <button onclick="showFullList()" style="padding: 0.5em 1em; font-size: 1em;">Show Full List</button>
+                            </p>
+                          </div>
+                        
+                          <!-- full version, hidden initially -->
+                          <div id="full-shopping-list" style="display: none; margin-top: 2em;">
                             <div id="data-table"></div>
-
+                          </div>
                         </section>
 
                         <!-- donors -->
@@ -189,6 +201,12 @@
     
       if (!kitsCounter.error) { kitsCounter.start(); } else { console.error(kitsCounter.error); }
       if (!valueCounter.error) { valueCounter.start(); } else { console.error(valueCounter.error); }
+    }
+    </script>
+    <script>
+    function showFullList() {
+      document.getElementById('shopping-preview').style.display = 'none';
+      document.getElementById('full-shopping-list').style.display = 'block';
     }
     </script>
 
