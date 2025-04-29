@@ -92,13 +92,13 @@
                         
                             <!-- preview list -->
                             <div id="shopping-preview" style="max-height: 6em; overflow: hidden; position: relative;">
-                              <ul style="list-style: disc; margin-left: 2em; padding-right: 1em;">
+                              <ul style="list-style: disc; margin-left: 2em; padding-right: 1em; position: relative;">
                                 <li>Beef Jerky — Country Archer Grass-Fed Minis</li>
                                 <li>Food Gift Card — Meal Gift Card</li>
                                 <li>Fruit Snack — Pure Organic Bars</li>
                               </ul>
-                              <!-- very strong fade-out -->
-                              <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 4em; background: linear-gradient(to bottom, rgba(255,255,255,0), var(--background)); pointer-events: none;"></div>
+                              <!-- stronger fading gradient -->
+                              <div id="fade-overlay" style="position: absolute; bottom: 0; left: 0; right: 0; height: 3em; background: linear-gradient(to bottom, rgba(255,255,255,0), var(--background)); pointer-events: none;"></div>
                             </div>
                         
                             <!-- full table, hidden initially -->
@@ -225,15 +225,18 @@
       if (isExpanded) {
         document.getElementById('shopping-preview').style.display = 'block';
         document.getElementById('full-shopping-list').style.display = 'none';
+        document.getElementById('fade-overlay').style.display = 'block';
         document.getElementById('toggleButton').innerText = 'Show Full List ↓';
         isExpanded = false;
       } else {
         document.getElementById('shopping-preview').style.display = 'none';
         document.getElementById('full-shopping-list').style.display = 'block';
+        document.getElementById('fade-overlay').style.display = 'none';
         document.getElementById('toggleButton').innerText = 'Hide Full List ↑';
         isExpanded = true;
       }
     }
+
     </script>
 
 
