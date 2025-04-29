@@ -92,14 +92,23 @@
                         
                             <!-- preview list -->
                             <div id="shopping-preview" style="max-height: 6em; overflow: hidden; position: relative;">
-                              <ul style="list-style: disc; margin-left: 2em; padding-right: 1em; position: relative;">
+                              <ul style="list-style: disc; margin-left: 2em; padding-right: 1em;">
                                 <li>Beef Jerky — Country Archer Grass-Fed Minis</li>
                                 <li>Food Gift Card — Meal Gift Card</li>
                                 <li>Fruit Snack — Pure Organic Bars</li>
                               </ul>
-                              <!-- stronger fading gradient -->
-                              <div id="fade-overlay" style="position: absolute; bottom: 0; left: 0; right: 0; height: 3em; background: linear-gradient(to bottom, rgba(255,255,255,0), var(--background)); pointer-events: none;"></div>
                             </div>
+                        
+                            <!-- super strong fading overlay -->
+                            <div id="fade-overlay" style="
+                              position: absolute;
+                              bottom: 4.5em; /* slightly above the preview's bottom */
+                              left: 0;
+                              right: 0;
+                              height: 3em;
+                              background: linear-gradient(to bottom, rgba(255,255,255,0), white);
+                              pointer-events: none;
+                            "></div>
                         
                             <!-- full table, hidden initially -->
                             <div id="full-shopping-list" style="display: none; margin-top: 2em;">
@@ -108,11 +117,10 @@
                         
                           </div>
                         
-                          <!-- the toggle button, *outside* everything -->
+                          <!-- the toggle button -->
                           <p style="text-align: center; margin-top: 1em;">
                             <button id="toggleButton" onclick="toggleList()" style="padding: 0.5em 1em; font-size: 1em;">Show Full List ↓</button>
                           </p>
-                        
                         </section>
 
                         <!-- donors -->
@@ -236,7 +244,6 @@
         isExpanded = true;
       }
     }
-
     </script>
 
 
