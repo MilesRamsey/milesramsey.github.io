@@ -49,8 +49,14 @@
                               <div style="margin-top: 0.75em; font-size: 2em; font-weight: bold; color: var(--text);">Total Value Delivered</div>
                             </div>
                         
+                            <div style="display: flex; flex-direction: column; align-items: center;">
+                              <div id="donationsReceived" style="font-size: 4em; font-weight: bold; color: var(--headers);">$0</div>
+                              <div style="margin-top: 0.75em; font-size: 2em; font-weight: bold; color: var(--text);">Donations Received</div>
+                            </div>
+                        
                           </div>
                         </section>
+
                         <!-- about section -->
                         <section id="about">
                             <h2>About</h2>
@@ -279,14 +285,18 @@
     window.onload = function() {
       const kitsDelivered = 3;
       const kitsValue = 51.36;
+      const donationsReceived = 300;
     
       const kitsCounter = new countUp.CountUp('kitsCount', kitsDelivered);
       const valueCounter = new countUp.CountUp('kitsValue', kitsValue, { prefix: '$', decimalPlaces: 2 });
+      const donationsCounter = new countUp.CountUp('donationsReceived', donationsReceived, { prefix: '$', decimalPlaces: 0 });
     
       if (!kitsCounter.error) { kitsCounter.start(); } else { console.error(kitsCounter.error); }
       if (!valueCounter.error) { valueCounter.start(); } else { console.error(valueCounter.error); }
+      if (!donationsCounter.error) { donationsCounter.start(); } else { console.error(donationsCounter.error); }
     }
     </script>
+
     <!-- script for shopping list -->
     <script>
     let isExpanded = false;
