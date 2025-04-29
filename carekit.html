@@ -87,27 +87,32 @@
                           <h2>Shopping List</h2>
                           <p>If you'd like to create your own, here's a list of the items I use:</p>
                         
-                          <!-- preview version -->
-                          <div id="shopping-preview" style="position: relative;">
-                            <div style="max-height: 6em; overflow: hidden; position: relative;">
+                          <!-- container for both states -->
+                          <div id="shopping-container" style="position: relative;">
+                        
+                            <!-- preview list -->
+                            <div id="shopping-preview" style="max-height: 6em; overflow: hidden; position: relative;">
                               <ul style="list-style: disc; margin-left: 2em; padding-right: 1em;">
                                 <li>Beef Jerky — Country Archer Grass-Fed Minis</li>
                                 <li>Food Gift Card — Meal Gift Card</li>
                                 <li>Fruit Snack — Pure Organic Bars</li>
                               </ul>
-                              <!-- fading gradient -->
-                              <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 2em; background: linear-gradient(to bottom, transparent, var(--background));"></div>
+                              <!-- very strong fade-out -->
+                              <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 4em; background: linear-gradient(to bottom, rgba(255,255,255,0), var(--background)); pointer-events: none;"></div>
                             </div>
                         
-                            <p style="text-align: center; margin-top: 1em;">
-                              <button id="toggleButton" onclick="toggleList()" style="padding: 0.5em 1em; font-size: 1em;">Show Full List ↓</button>
-                            </p>
+                            <!-- full table, hidden initially -->
+                            <div id="full-shopping-list" style="display: none; margin-top: 2em;">
+                              <div id="data-table"></div>
+                            </div>
+                        
                           </div>
                         
-                          <!-- full version, hidden initially -->
-                          <div id="full-shopping-list" style="display: none; margin-top: 2em;">
-                            <div id="data-table"></div>
-                          </div>
+                          <!-- the toggle button, *outside* everything -->
+                          <p style="text-align: center; margin-top: 1em;">
+                            <button id="toggleButton" onclick="toggleList()" style="padding: 0.5em 1em; font-size: 1em;">Show Full List ↓</button>
+                          </p>
+                        
                         </section>
 
                         <!-- donors -->
@@ -218,13 +223,13 @@
     
     function toggleList() {
       if (isExpanded) {
-        document.getElementById('full-shopping-list').style.display = 'none';
         document.getElementById('shopping-preview').style.display = 'block';
+        document.getElementById('full-shopping-list').style.display = 'none';
         document.getElementById('toggleButton').innerText = 'Show Full List ↓';
         isExpanded = false;
       } else {
-        document.getElementById('full-shopping-list').style.display = 'block';
         document.getElementById('shopping-preview').style.display = 'none';
+        document.getElementById('full-shopping-list').style.display = 'block';
         document.getElementById('toggleButton').innerText = 'Hide Full List ↑';
         isExpanded = true;
       }
