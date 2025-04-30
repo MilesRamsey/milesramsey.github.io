@@ -411,8 +411,16 @@
             if (!d.error) d.start();
           }
           if (stats.date_updated) {
-            document.querySelector('#reportDate').textContent = stats.date_updated;
-          }
+              let dateValue = stats.date_updated;
+              if (typeof dateValue === 'number') {
+                const baseDate = new Date(1899, 11, 30);
+                baseDate.setDate(baseDate.getDate() + dateValue);
+                const formatted = baseDate.toLocaleDateString('en-US');
+                document.querySelector('#reportDate').textContent = formatted;
+              } else {
+                document.querySelector('#reportDate').textContent = dateValue;
+              }
+            }
         })
         .catch(err => console.error('Failed to fetch stats:', err));
     </script>
