@@ -416,7 +416,7 @@
                 const baseDate = new Date(1899, 11, 30);
                 baseDate.setDate(baseDate.getDate() + dateValue);
                 const formatted = baseDate.toLocaleDateString('en-US');
-                document.querySelector('#reportDate').textContent = formatted;
+                document.querySelector('#reportDate').textContent = 'as of ' + formatted;
               } else {
                 document.querySelector('#reportDate').textContent = dateValue;
               }
