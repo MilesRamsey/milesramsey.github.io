@@ -136,11 +136,9 @@
                         <!-- donors -->
                         <section id="donors">
                           <h2>Donors</h2>
-                          <ul style="margin-left: 2em; margin-top: 1em;">
-                            <li style="margin-bottom: 0.5em;">• Miles Ramsey — Founder & Initial Donor</li>
-                            <!-- Add more donors here -->
-                            <!-- <li style="margin-bottom: 0.5em;">• Jane Doe — Supporter</li> -->
-                          </ul>
+                          <ul id="donorList" style="margin-left: 2em; margin-top: 1em;">
+                              <li style="margin-bottom: 0.5em;">• Miles Ramsey — Founder & Initial Donor</li>
+                            </ul>
                           <p style="margin-top: 1em;">
                               If you would like to become a donor, you can email me directly at <a href="mailto:milesjramsey@gmail.com">milesjramsey@gmail.com</a> or scan the Venmo QR code below<br>
                               <strong>Please include "Donation for Care Kits" and the name you prefer to be listed under</strong><br><br>
@@ -232,6 +230,30 @@
             </div>
         </div>
     </div>
+    <!-- script for getting donors -->
+    <script>
+      fetch("https://docs.google.com/spreadsheets/d/e/1x6h1-zQZ1AAHRuHviIVYORp8A63GLGGQ4mHiD2_r-TE/pub?output=csv")
+        .then(response => response.text())
+        .then(csv => {
+          const lines = csv.split('\n');
+          const donorList = document.getElementById('donorList');
+    
+          // Skip the header (first line)
+          for (let i = 1; i < lines.length; i++) {
+            const name = lines[i].split(',')[0].trim();
+            if (name && name.length > 0) {
+              const li = document.createElement('li');
+              li.textContent = `• ${name}`;
+              li.style.marginBottom = "0.5em";
+              donorList.appendChild(li);
+            }
+          }
+        })
+        .catch(err => {
+          console.error("Failed to load donor list:", err);
+        });
+    </script>
+
 
     <!-- script for getting sheet data -->
     <script>
