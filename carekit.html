@@ -232,7 +232,7 @@
     </div>
     <!-- script for getting donors -->
     <script>
-      fetch("https://docs.google.com/spreadsheets/d/e/1x6h1-zQZ1AAHRuHviIVYORp8A63GLGGQ4mHiD2_r-TE/pub?output=csv")
+      fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vT7bQELAMdI-wRXUUDi6Ux33Q4cjQSArRmK-TiYy5773CH_0TSXRMJv3B7V9-Q6oCocBWk-nlhYNk3Q/pub?gid=1021161802&single=true&output=csv")
         .then(response => response.text())
         .then(csv => {
           const lines = csv.split('\n');
