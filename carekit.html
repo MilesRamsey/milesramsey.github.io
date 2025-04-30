@@ -35,7 +35,7 @@
                         <!-- delivery report section -->
                         <section id="kits-delivered" style="margin-bottom: 4em;">
                           <h2 style="text-align: center; margin-bottom: 0.25em;">Impact Report</h2>
-                          <p style="text-align: center; font-size: 0.85em; color: var(--text); margin-top: 0; margin-bottom: 2em;"><em>as of 04/29/2025</em></p>
+                          <p id="reportDate" style="text-align: center; font-size: 0.85em; color: var(--text); margin-top: 0; margin-bottom: 2em;"><em>as of loading...</em></p>
                         
                           <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 8em; margin-top: 2em;">
                             
@@ -373,23 +373,52 @@
         .catch(err => console.log(err));
     </script>
 
+    
     <!-- script for number animation -->
     <script src="https://inorganik.github.io/countUp.js/dist/countUp.umd.js"></script>
     <script>
-    window.onload = function() {
-      const kitsDelivered = 5;
-      const kitsValue = 92.27;
-      const donationsReceived = 300;
+      const statsSheetId = '2PACX-1vT7bQELAMdI-wRXUUDi6Ux33Q4cjQSArRmK-TiYy5773CH_0TSXRMJv3B7V9-Q6oCocBWk-nlhYNk3Q'; // Replace with your actual sheet ID
+      const statsSheetName = 'totals'; // The tab name from Step 1
+      const statsQuery = encodeURIComponent('SELECT *');
+      const statsUrl = `https://docs.google.com/spreadsheets/d/${statsSheetId}/gviz/tq?sheet=${statsSheetName}&tq=${statsQuery}`;
     
-      const kitsCounter = new countUp.CountUp('kitsCount', kitsDelivered);
-      const valueCounter = new countUp.CountUp('kitsValue', kitsValue, { prefix: '$', decimalPlaces: 2 });
-      const donationsCounter = new countUp.CountUp('donationsReceived', donationsReceived, { prefix: '$', decimalPlaces: 0 });
+      fetch(statsUrl)
+        .then(res => res.text())
+        .then(rep => {
+          const json = JSON.parse(rep.substring(47).slice(0, -2));
+          const rows = json.table.rows;
     
-      if (!kitsCounter.error) { kitsCounter.start(); } else { console.error(kitsCounter.error); }
-      if (!valueCounter.error) { valueCounter.start(); } else { console.error(valueCounter.error); }
-      if (!donationsCounter.error) { donationsCounter.start(); } else { console.error(donationsCounter.error); }
-    }
+          const stats = {};
+          rows.forEach(row => {
+            const key = row.c[0]?.v;
+            const value = row.c[1]?.v;
+            if (key && value !== null) {
+              stats[key] = value;
+            }
+          });
+    
+          // Now update the DOM
+          if (stats.kits_delivered) {
+            const k = new countUp.CountUp('kitsCount', stats.kits_delivered);
+            if (!k.error) k.start();
+          }
+          if (stats.total_value) {
+            const v = new countUp.CountUp('kitsValue', stats.total_value, { prefix: '$', decimalPlaces: 2 });
+            if (!v.error) v.start();
+          }
+          if (stats.donations_received) {
+            const d = new countUp.CountUp('donationsReceived', stats.donations_received, { prefix: '$', decimalPlaces: 0 });
+            if (!d.error) d.start();
+          }
+          if (stats.date_updated) {
+            document.querySelector('#reportDate').textContent = stats.date_updated;
+          }
+        })
+        .catch(err => console.error('Failed to fetch stats:', err));
     </script>
+
+    <!-- script for number animation -->
+    <script src="https://inorganik.github.io/countUp.js/dist/countUp.umd.js"></script>
 
     <!-- script for shopping list -->
     <script>
